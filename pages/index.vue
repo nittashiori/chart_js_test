@@ -1,52 +1,56 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        chart_js_test
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    <h1 class="title">vue-chartjsで棒グラフ</h1>
+    <div class="graph">
+      <BarChart :chartdata="chartdata" :options="options" />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+// pluginに登録したのでimportしなくて良い
+// import BarChart from '@/components/BarChart.vue'
+import Data from '@/data/bar.json'
+
+export default {
+  // components: {
+  //   BarChart,
+  // },
+  data() {
+    return {
+      chartdata: {
+        labels: Data.data.map((data) => data.month),
+        datasets: [
+          {
+            label: ['Data One'],
+            backgroundColor: '#f87979',
+            data: Data.data.map((data) => data.sale),
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    }
+  },
+}
 </script>
 
 <style>
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
 .title {
+  margin: 30px auto;
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 30px;
   color: #35495e;
   letter-spacing: 1px;
 }
