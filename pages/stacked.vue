@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <h1 class="title">vue-chartjsで帯グラフ</h1>
-    <div class="graph">
+    <!-- <div class="graph">
       <stacked-chart />
-    </div>
+    </div> -->
     <table class="table">
       <thead>
         <tr>
@@ -18,7 +18,7 @@
         <tr>
           <td>1</td>
           <td>職場の仕事の方針に自分の意見を反映出来る</td>
-          <td>グラフが入る</td>
+          <td><stacked-chart /></td>
           <td>50%</td>
           <td>50%</td>
         </tr>
@@ -58,9 +58,11 @@ export default {
   width: 100%;
   max-width: 1200px;
   margin: 40px auto;
+  border-collapse: collapse;
   th,
   td {
     padding: 10px;
+    border: 1px solid #ddd;
   }
   th {
     background: #eee;

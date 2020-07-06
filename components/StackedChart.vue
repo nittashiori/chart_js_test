@@ -6,16 +6,16 @@ export default {
   data() {
     return {
       chartdata: {
-        labels: ['Store 1', 'Store 2', 'Store 3'],
+        labels: ['Store 1'],
         datasets: [
           {
             label: 'Orange',
-            data: [3, 6, 9],
+            data: [3],
             backgroundColor: '#F6AD3C',
           },
           {
             label: 'Grape',
-            data: [12, 8, 4],
+            data: [12],
             backgroundColor: '#A64A97',
             // ラベルを個別で指定
             // datalabels: {
@@ -28,7 +28,7 @@ export default {
           },
           {
             label: 'Melon',
-            data: [2, 6, 4],
+            data: [2],
             backgroundColor: '#AACF52',
           },
         ],
