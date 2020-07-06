@@ -28,6 +28,15 @@ export default {
       options: {
         responsive: false,
         plugins: {
+          datalabels: {
+            color: '#222',
+            align: 'center',
+            formatter: (_value, context) => {
+              const data = context.chart.data
+              const { datasetIndex, dataIndex } = context
+              return `${data.calculatedData[datasetIndex][dataIndex]}% (${data.originalData[datasetIndex][dataIndex]})`
+            },
+          },
           stacked100: { enable: true },
         },
       },

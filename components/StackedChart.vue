@@ -35,10 +35,18 @@ export default {
       },
       options: {
         responsive: false,
+        legend: {
+          display: false,
+        },
         plugins: {
           datalabels: {
             color: '#fff',
             align: 'center',
+            formatter: (_value, context) => {
+              const data = context.chart.data
+              const { datasetIndex, dataIndex } = context
+              return `${data.calculatedData[datasetIndex][dataIndex]}%`
+            },
           },
           stacked100: { enable: true },
         },
@@ -46,11 +54,17 @@ export default {
           xAxes: [
             {
               stacked: true,
+              ticks: {
+                display: false,
+              },
             },
           ],
           yAxes: [
             {
               stacked: true,
+              ticks: {
+                display: false,
+              },
             },
           ],
         },
