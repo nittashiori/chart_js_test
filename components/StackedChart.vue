@@ -57,12 +57,18 @@ export default {
               ticks: {
                 display: false,
               },
+              gridLines: {
+                display: false,
+              },
             },
           ],
           yAxes: [
             {
               stacked: true,
               ticks: {
+                display: false,
+              },
+              gridLines: {
                 display: false,
               },
             },
