@@ -13,7 +13,11 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
-    "nuxt": "^2.13.0"
+    "chart.js": "^2.9.3",
+    "chartjs-plugin-datalabels": "^0.7.0",
+    "chartjs-plugin-stacked100": "^0.7.1",
+    "nuxt": "^2.13.0",
+    "vue-chartjs": "^3.5.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
@@ -23,6 +27,9 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5"
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "ress": "^2.0.4",
+    "sass-loader": "^9.0.1"
   }
 }
