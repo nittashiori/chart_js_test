@@ -31,10 +31,20 @@ export default {
             data: [2],
             backgroundColor: '#AACF52',
           },
+          {
+            label: 'BlueBerry',
+            data: [4],
+            backgroundColor: '#1f3375',
+          },
+          {
+            label: 'Cherry',
+            data: [8],
+            backgroundColor: '#ef3992',
+          },
         ],
       },
       options: {
-        responsive: false,
+        responsive: true,
         legend: {
           display: false,
         },
@@ -78,6 +88,7 @@ export default {
     }
   },
   mounted() {
+    this.$refs.canvas.height = 100
     this.renderChart(this.chartdata, this.options)
   },
 }
