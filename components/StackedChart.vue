@@ -44,6 +44,9 @@ export default {
         legend: {
           display: false,
         },
+        animation: {
+          duration: 0,
+        },
         plugins: {
           datalabels: {
             color: '#fff',
