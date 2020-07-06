@@ -34,7 +34,11 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '@/plugins/vue-chartjs.js', ssr: true }],
+  plugins: [
+    { src: '@/plugins/vue-chartjs.js', ssr: true },
+    { src: '@/plugins/chartjs-datalabels.js', ssr: false },
+    { src: '@/plugins/chartjs-stacked100.js', ssr: false },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components

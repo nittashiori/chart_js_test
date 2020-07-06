@@ -14,7 +14,7 @@ import Data from '@/data/bar.json'
 
 export default {
   // components: {
-  //   BarChart,
+  // BarChart,
   // },
   data() {
     return {
