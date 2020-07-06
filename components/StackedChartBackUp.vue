@@ -12,6 +12,14 @@ export default {
             label: 'bad',
             data: [5, 25],
             backgroundColor: 'rgba(244, 143, 177, 0.6)',
+            // ラベルを個別で指定
+            // datalabels: {
+            //   labels: {
+            //     value: {
+            //       color: '#fff',
+            //     },
+            //   },
+            // },
           },
           {
             label: 'better',

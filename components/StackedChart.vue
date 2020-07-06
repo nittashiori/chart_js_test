@@ -6,25 +6,18 @@ export default {
   data() {
     return {
       chartdata: {
-        labels: ['Store 1'],
+        labels: ['Chart1'],
         datasets: [
           {
             label: 'Orange',
-            data: [3],
+            data: [1],
             backgroundColor: '#F6AD3C',
+            fontSize: '20',
           },
           {
             label: 'Grape',
             data: [12],
             backgroundColor: '#A64A97',
-            // ラベルを個別で指定
-            // datalabels: {
-            //   labels: {
-            //     value: {
-            //       color: '#fff',
-            //     },
-            //   },
-            // },
           },
           {
             label: 'Melon',
@@ -45,6 +38,9 @@ export default {
       },
       options: {
         responsive: true,
+        tooltips: {
+          enabled: false,
+        },
         legend: {
           display: false,
         },
