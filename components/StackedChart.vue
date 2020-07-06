@@ -48,6 +48,10 @@ export default {
           datalabels: {
             color: '#fff',
             align: 'center',
+            font: {
+              weight: 'bold',
+              size: 14,
+            },
             formatter: (_value, context) => {
               const data = context.chart.data
               const { datasetIndex, dataIndex } = context
