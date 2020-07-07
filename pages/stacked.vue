@@ -1,38 +1,31 @@
 <template>
   <div class="container">
     <h1 class="title">vue-chartjsで帯グラフ</h1>
-    <!-- <div class="graph">
-      <stacked-chart />
-    </div> -->
     <table class="table">
       <thead>
         <tr>
-          <th>No</th>
-          <th>設問</th>
-          <th>回答分析</th>
-          <th>否定的回答</th>
-          <th>肯定的回答</th>
+          <th data-title="no">No</th>
+          <th data-title="question">設問</th>
+          <th data-title="analysis">回答分析</th>
+          <th data-title="negative">否定的回答</th>
+          <th data-title="positive">肯定的回答</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>職場の仕事の方針に自分の意見を反映出来る</td>
-          <td><stacked-chart /></td>
-          <td>50%</td>
-          <td>50%</td>
-        </tr>
+        <table-list v-for="list in lists" :key="list.id" :arg="list" />
       </tbody>
     </table>
   </div>
 </template>
 
 <script>
-import StackedChart from '@/components/StackedChart.vue'
+import StackedData from '@/store/stacked_data.json'
 
 export default {
-  components: {
-    StackedChart,
+  asyncData(context) {
+    return {
+      lists: StackedData.lists,
+    }
   },
 }
 </script>
@@ -66,6 +59,9 @@ export default {
   }
   th {
     background: #eee;
+  }
+  th[data-title='question'] {
+    width: 480px;
   }
 }
 </style>
