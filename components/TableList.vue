@@ -33,7 +33,7 @@ export default {
             data: StackedData.lists.map(
               (lists) => this.arg.object_chart[0].num
             ),
-            backgroundColor: '#F6AD3C',
+            backgroundColor: '#ff7f7f',
           },
           {
             label: StackedData.lists.map(
@@ -42,7 +42,7 @@ export default {
             data: StackedData.lists.map(
               (lists) => this.arg.object_chart[1].num
             ),
-            backgroundColor: '#A64A97',
+            backgroundColor: '#ffa8a8',
           },
           {
             label: StackedData.lists.map(
@@ -51,7 +51,7 @@ export default {
             data: StackedData.lists.map(
               (lists) => this.arg.object_chart[2].num
             ),
-            backgroundColor: '#AACF52',
+            backgroundColor: '#ffc6c6',
           },
           {
             label: StackedData.lists.map(
@@ -60,7 +60,7 @@ export default {
             data: StackedData.lists.map(
               (lists) => this.arg.object_chart[3].num
             ),
-            backgroundColor: '#1f3375',
+            backgroundColor: '#c1e0ff',
           },
           {
             label: StackedData.lists.map(
@@ -69,7 +69,7 @@ export default {
             data: StackedData.lists.map(
               (lists) => this.arg.object_chart[4].num
             ),
-            backgroundColor: '#A64A97',
+            backgroundColor: '#a8d3ff',
           },
           {
             label: StackedData.lists.map(
@@ -78,7 +78,7 @@ export default {
             data: StackedData.lists.map(
               (lists) => this.arg.object_chart[5].num
             ),
-            backgroundColor: '#ef3992',
+            backgroundColor: '#84c1ff',
           },
         ],
       },
@@ -95,7 +95,7 @@ export default {
         },
         plugins: {
           datalabels: {
-            color: '#fff',
+            color: '#222',
             align: 'center',
             font: {
               weight: 'bold',
@@ -104,7 +104,10 @@ export default {
             formatter: (_value, context) => {
               const data = context.chart.data
               const { datasetIndex, dataIndex } = context
-              return `${data.calculatedData[datasetIndex][dataIndex]}%`
+              return (
+                // `${data.calculatedData[datasetIndex][dataIndex]}` + '\n' + `%`
+                `${data.calculatedData[datasetIndex][dataIndex]}`
+              )
             },
           },
           stacked100: { enable: true },
@@ -126,6 +129,7 @@ export default {
               stacked: true,
               ticks: {
                 display: false,
+                // beginAtZero: true,
               },
               gridLines: {
                 display: false,
