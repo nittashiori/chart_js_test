@@ -74,6 +74,7 @@ export default {
         responsive: true,
         tooltips: {
           enabled: false,
+          titleFontSize: 0,
         },
         hover: {
           mode: null,
