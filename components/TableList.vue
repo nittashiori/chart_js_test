@@ -27,56 +27,44 @@ export default {
       chartdata: {
         datasets: [
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[0].label
-            ),
+            label: 'とてもそう思う',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[0].num
+              (lists) => this.arg.object_chart[0].excellent
             ),
             backgroundColor: '#ff7f7f',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[1].label
-            ),
+            label: 'そう思う',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[1].num
+              (lists) => this.arg.object_chart[1].great
             ),
             backgroundColor: '#ffa8a8',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[2].label
-            ),
+            label: 'まぁそう思う',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[2].num
+              (lists) => this.arg.object_chart[2].good
             ),
             backgroundColor: '#ffc6c6',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[3].label
-            ),
+            label: 'あまりそう思わない',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[3].num
+              (lists) => this.arg.object_chart[3].fair
             ),
             backgroundColor: '#c1e0ff',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[4].label
-            ),
+            label: 'そう思わない',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[4].num
+              (lists) => this.arg.object_chart[4].poor
             ),
             backgroundColor: '#a8d3ff',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[5].label
-            ),
+            label: 'まったくそう思わない',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[5].num
+              (lists) => this.arg.object_chart[5].bad
             ),
             backgroundColor: '#84c1ff',
           },
