@@ -96,6 +96,11 @@ export default {
         animation: {
           duration: 0,
         },
+        layout: {
+          padding: {
+            right: 5,
+          },
+        },
         plugins: {
           datalabels: {
             color: '#222',
@@ -132,7 +137,6 @@ export default {
               stacked: true,
               ticks: {
                 display: false,
-                // beginAtZero: true,
               },
               gridLines: {
                 display: false,
