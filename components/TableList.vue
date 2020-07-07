@@ -87,6 +87,9 @@ export default {
         tooltips: {
           enabled: false,
         },
+        hover: {
+          mode: null,
+        },
         legend: {
           display: false,
         },
