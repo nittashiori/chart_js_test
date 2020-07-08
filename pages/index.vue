@@ -6,7 +6,7 @@
         <nuxt-link to="/stacked">100%積み上げ棒グラフ</nuxt-link>
       </li>
       <li class="nav__item">
-        <nuxt-link to="/scatterplot">散布図</nuxt-link>
+        <nuxt-link to="/scatter">散布図</nuxt-link>
       </li>
     </ul>
     <div class="graph">
@@ -79,5 +79,10 @@ export default {
   &__item:not(:first-child) {
     margin: 0 0 0 40px;
   }
+}
+
+.graph {
+  max-width: 920px;
+  margin: auto;
 }
 </style>
