@@ -93,18 +93,13 @@ export default {
         plugins: {
           datalabels: {
             color: '#222',
+            rotation(context) {
+              return context.dataset.data[0] < 5 ? 90 : 0
+            },
             align: 'center',
             font: {
               weight: 'bold',
               size: 14,
-            },
-            formatter: (_value, context) => {
-              const data = context.chart.data
-              const { datasetIndex, dataIndex } = context
-              return (
-                // `${data.calculatedData[datasetIndex][dataIndex]}` + '\n' + `%`
-                `${data.calculatedData[datasetIndex][dataIndex]}`
-              )
             },
           },
           stacked100: { enable: true },
