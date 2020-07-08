@@ -1,6 +1,14 @@
 <template>
   <div class="container">
     <h1 class="title">vue-chartjsで棒グラフ</h1>
+    <ul class="nav">
+      <li class="nav__item">
+        <nuxt-link to="/stacked">100%積み上げ棒グラフ</nuxt-link>
+      </li>
+      <li class="nav__item">
+        <nuxt-link to="/scatterplot">散布図</nuxt-link>
+      </li>
+    </ul>
     <div class="graph">
       <BarChart :chartdata="chartdata" :options="options" />
     </div>
@@ -37,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -63,7 +71,13 @@ export default {
   padding-bottom: 15px;
 }
 
-.links {
-  padding-top: 15px;
+.nav {
+  width: 800px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  &__item:not(:first-child) {
+    margin: 0 0 0 40px;
+  }
 }
 </style>

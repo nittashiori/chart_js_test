@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <h1 class="title">vue-chartjsで帯グラフ</h1>
+    <h1 class="title">vue-chartjsで100%積み上げ棒グラフ</h1>
+    <ul class="nav">
+      <li class="nav__item">
+        <nuxt-link to="/">戻る</nuxt-link>
+      </li>
+    </ul>
     <table class="table">
       <thead>
         <tr>
