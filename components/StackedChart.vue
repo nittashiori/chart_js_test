@@ -14,7 +14,7 @@ export default {
     },
   },
   mounted() {
-    this.$refs.canvas.height = 100
+    this.$refs.canvas.height = 60
     this.renderChart(this.chartdata, this.options)
   },
 }

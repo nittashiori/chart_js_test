@@ -6,9 +6,9 @@
         <tr>
           <th data-title="no">No</th>
           <th data-title="question">設問</th>
-          <th data-title="analysis">回答分析</th>
-          <th data-title="negative">否定的回答</th>
-          <th data-title="positive">肯定的回答</th>
+          <th data-title="analysis">回答分析（単位：%）</th>
+          <th data-title="negative">否定的<br />回答</th>
+          <th data-title="positive">肯定的<br />回答</th>
         </tr>
       </thead>
       <tbody>
@@ -60,8 +60,22 @@ export default {
   th {
     background: #eee;
   }
+  th[data-title='no'] {
+    width: 30px;
+  }
   th[data-title='question'] {
-    width: 480px;
+    width: 320px;
+  }
+  th[data-title='negative'],
+  th[data-title='positive'] {
+    width: 80px;
+  }
+  td[data-title='question'] {
+    text-align: left;
+  }
+  td[data-title='analysis'] {
+    width: 500px;
+    padding: 0 5px 0 0;
   }
 }
 </style>

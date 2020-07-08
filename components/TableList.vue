@@ -27,58 +27,46 @@ export default {
       chartdata: {
         datasets: [
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[0].label
-            ),
+            label: 'とてもそう思う',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[0].num
+              (lists) => this.arg.object_chart[0].excellent
             ),
-            backgroundColor: '#F6AD3C',
+            backgroundColor: '#ff7f7f',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[1].label
-            ),
+            label: 'そう思う',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[1].num
+              (lists) => this.arg.object_chart[1].great
             ),
-            backgroundColor: '#A64A97',
+            backgroundColor: '#ffa8a8',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[2].label
-            ),
+            label: 'まぁそう思う',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[2].num
+              (lists) => this.arg.object_chart[2].good
             ),
-            backgroundColor: '#AACF52',
+            backgroundColor: '#ffc6c6',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[3].label
-            ),
+            label: 'あまりそう思わない',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[3].num
+              (lists) => this.arg.object_chart[3].fair
             ),
-            backgroundColor: '#1f3375',
+            backgroundColor: '#c1e0ff',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[4].label
-            ),
+            label: 'そう思わない',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[4].num
+              (lists) => this.arg.object_chart[4].poor
             ),
-            backgroundColor: '#A64A97',
+            backgroundColor: '#a8d3ff',
           },
           {
-            label: StackedData.lists.map(
-              (lists) => this.arg.object_chart[5].label
-            ),
+            label: 'まったくそう思わない',
             data: StackedData.lists.map(
-              (lists) => this.arg.object_chart[5].num
+              (lists) => this.arg.object_chart[5].bad
             ),
-            backgroundColor: '#ef3992',
+            backgroundColor: '#84c1ff',
           },
         ],
       },
@@ -86,6 +74,10 @@ export default {
         responsive: true,
         tooltips: {
           enabled: false,
+          titleFontSize: 0,
+        },
+        hover: {
+          mode: null,
         },
         legend: {
           display: false,
@@ -93,18 +85,21 @@ export default {
         animation: {
           duration: 0,
         },
+        layout: {
+          padding: {
+            right: 5,
+          },
+        },
         plugins: {
           datalabels: {
-            color: '#fff',
+            color: '#222',
+            rotation(context) {
+              return context.dataset.data[0] < 5 ? 90 : 0
+            },
             align: 'center',
             font: {
               weight: 'bold',
               size: 14,
-            },
-            formatter: (_value, context) => {
-              const data = context.chart.data
-              const { datasetIndex, dataIndex } = context
-              return `${data.calculatedData[datasetIndex][dataIndex]}%`
             },
           },
           stacked100: { enable: true },
