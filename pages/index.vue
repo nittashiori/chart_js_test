@@ -3,6 +3,9 @@
     <h1 class="title">vue-chartjsで棒グラフ</h1>
     <ul class="nav">
       <li class="nav__item">
+        <nuxt-link to="/questions">診断ページ</nuxt-link>
+      </li>
+      <li class="nav__item">
         <nuxt-link to="/stacked">100%積み上げ棒グラフ</nuxt-link>
       </li>
       <li class="nav__item">
@@ -18,7 +21,7 @@
 <script>
 // pluginに登録したのでimportしなくて良い
 // import BarChart from '@/components/BarChart.vue'
-import Data from '@/data/bar.json'
+import Data from '@/assets/data/bar.json'
 
 export default {
   // components: {
@@ -84,5 +87,10 @@ export default {
 .graph {
   max-width: 920px;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #1da0f2;
 }
 </style>

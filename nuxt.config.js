@@ -1,3 +1,5 @@
+const questionsList = require('./assets/data/questionsList.json')
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -68,4 +70,12 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  generate: {
+    fallback: true,
+    routes() {
+      return questionsList.items.map((item) => {
+        return `questions/${item.id}`
+      })
+    },
+  },
 }
