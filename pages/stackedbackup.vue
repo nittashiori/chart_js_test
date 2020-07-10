@@ -23,15 +23,4 @@ export default {
   min-height: 100vh;
   text-align: center;
 }
-
-.title {
-  margin: 30px auto;
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 30px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
 </style>

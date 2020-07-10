@@ -1,0 +1,47 @@
+// Breakpoints
+// ----------------------------------------
+
+$breakpoints: (
+  'sm': 375px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1200px
+) !default;
+
+// Color
+// ----------------------------------------
+$text-color: #35495e;
+$link-color: #1da0f2;
+
+// Font
+// ----------------------------------------
+@mixin font-ja {
+  font-family: "Istok Web", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin font-en {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+// Font-size
+// ----------------------------------------
+$fts-reset: 62.5%;
+$fts-x-heading: 4rem;
+$fts-heading: 3.0rem;
+$fts-xxx-large: 2.4rem;
+$fts-xx-large: 2.2rem;
+$fts-x-large: 2.0rem;
+$fts-large: 1.8rem;
+$fts-medium: 1.6rem;
+$fts-regular: 1.4rem;
+$fts-small: 1.2rem;
+$fts-x-small: 1.0rem;
+
+// Easing
+// ----------------------------------------
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$fadeCubic: cubic-bezier(0.155, 0.910, 0.695, 0.950);
+$ease: ease;
