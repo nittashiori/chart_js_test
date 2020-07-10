@@ -15,12 +15,6 @@ export default {
     Title,
     answer,
   },
-  asyncData({ store }) {
-    const jsonAll = store.getters['questions/getQuestions']
-    return {
-      jsonNum: jsonAll.length,
-    }
-  },
   computed: {
     question() {
       const question = this.$store.getters['questions/getQuestions'].filter(
