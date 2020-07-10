@@ -44,7 +44,4 @@ export default {
   opacity: 0;
   transform: translateY(-44%);
 }
-.title {
-  margin: 40px auto;
-}
 </style>

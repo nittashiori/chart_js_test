@@ -56,10 +56,10 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-  ],
+  modules: ['@nuxtjs/style-resources'],
+  styleResources: {
+    scss: ['@/assets/scss/variables.scss', '@/assets/scss/common.scss'],
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
