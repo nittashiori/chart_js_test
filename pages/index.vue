@@ -48,21 +48,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
-  margin: 0 auto;
   min-height: 100vh;
-  text-align: center;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
 .nav {
   width: 800px;
   margin: 40px auto;

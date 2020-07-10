@@ -1,8 +1,11 @@
 <template>
   <div class="container">
-    <Title :data="question" />
-    <answer :data="question" />
-    <progress-bar :data="question" />
+    <div class="question-area">
+      <Title :data="question" />
+      <answer :data="question" />
+      <progress-bar :data="question" />
+    </div>
+    <control-btn :data="question" />
   </div>
 </template>
 
@@ -10,6 +13,7 @@
 import Title from '@/components/question/Title.vue'
 import answer from '@/components/question/answer.vue'
 import ProgressBar from '@/components/question/ProgressBar.vue'
+import ControlBtn from '@/components/question/ControlBtn.vue'
 
 export default {
   transition: 'fade',
@@ -17,6 +21,7 @@ export default {
     Title,
     answer,
     ProgressBar,
+    ControlBtn,
   },
   computed: {
     question() {
@@ -36,4 +41,11 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.question-area {
+  width: 960px;
+  margin: 40px auto;
+  padding: 0 0 40px;
+  border-bottom: 1px solid $border-color;
+}
+</style>
