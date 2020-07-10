@@ -8,14 +8,12 @@
 <script>
 import Title from '@/components/question/Title.vue'
 import answer from '@/components/question/answer.vue'
-import QuestionNav from '@/components/question/QuestionNav.vue'
 
 export default {
   transition: 'fade',
   component: {
     Title,
     answer,
-    QuestionNav,
   },
   asyncData({ store }) {
     const jsonAll = store.getters['questions/getQuestions']
