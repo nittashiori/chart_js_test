@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "問1",
+      "description": "りんごはうまい"
+    },
+    {
+      "id": "2",
+      "name": "問2",
+      "description": "オレンジはうまい"
+    },
+    {
+      "id": "3",
+      "name": "問3",
+      "description": "バナナはうまい"
+    },
+    {
+      "id": "4",
+      "name": "問4",
+      "description": "ブドウはうまい"
+    }
+  ],
+  "default": {
+    "id": "fruits",
+    "name": "くだもの",
+    "description": "くだものをあつめます"
+  },
+  "error": {
+    "id": "notfound",
+    "name": "問0",
+    "description": "なにもないのでなし"
+  }
+}
