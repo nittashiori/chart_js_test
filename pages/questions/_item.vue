@@ -2,18 +2,21 @@
   <div class="container">
     <Title :data="question" />
     <answer :data="question" />
+    <progress-bar :data="question" />
   </div>
 </template>
 
 <script>
 import Title from '@/components/question/Title.vue'
 import answer from '@/components/question/answer.vue'
+import ProgressBar from '@/components/question/ProgressBar.vue'
 
 export default {
   transition: 'fade',
   component: {
     Title,
     answer,
+    ProgressBar,
   },
   computed: {
     question() {
