@@ -27,3 +27,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.progressbar {
+  display: flex;
+  justify-content: center;
+  font-size: $fts-x-large;
+}
+</style>

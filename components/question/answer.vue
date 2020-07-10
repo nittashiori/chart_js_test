@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .select-area {
-  width: 960px;
+  width: 100%;
   margin: 40px auto;
   display: flex;
   justify-content: center;
@@ -67,12 +67,12 @@ export default {
   }
 
   > li:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 16px;
   }
 
   a {
     display: block;
-    padding: 10px;
+    padding: 12px;
   }
 
   a:hover {
