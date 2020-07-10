@@ -2,7 +2,6 @@
   <div class="container">
     <Title :data="question" />
     <answer :data="question" />
-    <question-nav />
   </div>
 </template>
 
@@ -17,6 +16,12 @@ export default {
     Title,
     answer,
     QuestionNav,
+  },
+  asyncData({ store }) {
+    const jsonAll = store.getters['questions/getQuestions']
+    return {
+      jsonNum: jsonAll.length,
+    }
   },
   computed: {
     question() {

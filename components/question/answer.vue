@@ -31,6 +31,13 @@ export default {
         return this.$store.getters['questions/error']
       },
     },
+    jsonNum: {
+      type: Number,
+      require: true,
+      default() {
+        return this.$store.getters['questions/getQuestions'].length
+      },
+    },
   },
   data() {
     return {
@@ -39,7 +46,7 @@ export default {
   },
   computed: {
     link() {
-      return this.id + 1
+      return this.id >= this.jsonNum ? 'finish' : this.id + 1
     },
   },
 }
