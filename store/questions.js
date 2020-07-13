@@ -1,4 +1,4 @@
-import questionsList from '~/assets/data/questionsList.json'
+import questionsList from '~/assets/data/questionslist.json'
 
 export const state = () => ({
   items: questionsList.items,

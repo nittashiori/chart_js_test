@@ -1,4 +1,4 @@
-const questionsList = require('./assets/data/questionsList.json')
+const questionsList = require('./assets/data/questionslist.json')
 
 export default {
   /*
