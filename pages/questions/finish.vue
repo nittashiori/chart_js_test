@@ -6,7 +6,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  middleware: 'reject-direct',
+}
 </script>
 
 <style lang="scss"></style>

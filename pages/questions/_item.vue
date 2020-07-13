@@ -17,6 +17,7 @@ import ControlBtn from '@/components/question/ControlBtn.vue'
 
 export default {
   transition: 'fade',
+  middleware: 'reject-direct',
   component: {
     Title,
     answer,
