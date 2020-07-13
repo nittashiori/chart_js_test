@@ -1,3 +1,5 @@
+const questionsList = require('./assets/data/questionsList.json')
+
 export default {
   /*
    ** Nuxt rendering mode
