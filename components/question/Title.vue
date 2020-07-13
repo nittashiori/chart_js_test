@@ -21,11 +21,6 @@ export default {
       isOk: false,
     }
   },
-  computed: {
-    path() {
-      return require(`~/assets/${this.data.id || 'nashi'}.png`)
-    },
-  },
   mounted() {
     setTimeout(() => {
       this.isOk = true
