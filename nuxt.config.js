@@ -1,5 +1,8 @@
 const questionsList = require('./assets/data/questionslist.json')
 
+const description =
+  'nuxtで練習としてChart.jsを組み立てたり、診断っぽいページを作成したりしてる'
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -20,11 +23,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || '',
-      },
+      { name: 'description', content: description },
+      { name: 'robots', content: 'noindex' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
