@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="title">vue-chartjsで100%積み上げ棒グラフ</h1>
+    <page-title>
+      vue-chartjsで100%積み上げ棒グラフ
+    </page-title>
     <ul class="nav">
       <li class="nav__item">
         <nuxt-link to="/">戻る</nuxt-link>
@@ -24,9 +26,13 @@
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle.vue'
 import StackedData from '@/store/stacked_data.json'
 
 export default {
+  component: {
+    PageTitle,
+  },
   asyncData(context) {
     return {
       lists: StackedData.lists,
@@ -37,9 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  margin: 0 auto;
   min-height: 100vh;
-  text-align: center;
 }
 .table {
   width: 100%;

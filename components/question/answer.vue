@@ -1,5 +1,5 @@
 <template>
-  <ul class="select-area">
+  <ul class="answer-area">
     <li>
       <nuxt-link :to="`${link}`">とてもそう思う</nuxt-link>
     </li>
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.select-area {
+.answer-area {
   width: 100%;
   margin: 40px auto;
   display: flex;

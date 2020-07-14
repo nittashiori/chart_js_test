@@ -1,9 +1,14 @@
 <template>
   <div class="container">
-    <h1 class="title">vue-chartjsで棒グラフ</h1>
+    <page-title>
+      vue-chartjsで棒グラフ
+    </page-title>
     <ul class="nav">
       <li class="nav__item">
         <nuxt-link to="/questions">診断ページ</nuxt-link>
+      </li>
+      <li class="nav__item">
+        <nuxt-link to="/form">ユーザー登録</nuxt-link>
       </li>
       <li class="nav__item">
         <nuxt-link to="/stacked">100%積み上げ棒グラフ</nuxt-link>
@@ -19,14 +24,13 @@
 </template>
 
 <script>
-// pluginに登録したのでimportしなくて良い
-// import BarChart from '@/components/BarChart.vue'
+import PageTitle from '@/components/PageTitle.vue'
 import Data from '@/assets/data/bar.json'
 
 export default {
-  // components: {
-  // BarChart,
-  // },
+  components: {
+    PageTitle,
+  },
   data() {
     return {
       chartdata: {

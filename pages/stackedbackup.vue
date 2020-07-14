@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="title">vue-chartjsで帯グラフ</h1>
+    <page-title>
+      vue-chartjsで帯グラフ
+    </page-title>
     <div class="graph">
       <stacked-chart-back-up />
     </div>
@@ -8,10 +10,11 @@
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle.vue'
 import StackedChartBackUp from '@/components/StackedChartBackUp.vue'
-
 export default {
   components: {
+    PageTitle,
     StackedChartBackUp,
   },
 }
@@ -19,8 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  margin: 0 auto;
   min-height: 100vh;
-  text-align: center;
 }
 </style>

@@ -30,6 +30,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title {
+  margin: 40px auto;
+  font-size: $fts-heading;
+  letter-spacing: 1px;
+  text-align: center;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.4s ease-in-out;

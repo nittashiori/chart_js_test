@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="title">vue-chartjsで散布図</h1>
+    <page-title>
+      vue-chartjsで散布図
+    </page-title>
     <ul class="nav">
       <li class="nav__item">
         <nuxt-link to="/">戻る</nuxt-link>
@@ -80,10 +82,12 @@
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle.vue'
 import ScatterChart from '@/components/ScatterChart.vue'
 
 export default {
   components: {
+    PageTitle,
     ScatterChart,
   },
 }
@@ -91,9 +95,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  margin: 0 auto;
   min-height: 100vh;
-  text-align: center;
 }
 p {
   margin: 40px 0;
