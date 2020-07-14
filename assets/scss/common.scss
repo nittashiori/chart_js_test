@@ -1,7 +1,10 @@
-.title {
-  margin: 40px auto;
-  font-size: $fts-heading;
-  letter-spacing: 1px;
+@import 'mixins';
+
+.container {
+  margin: 0 auto;
+}
+
+.nav {
   text-align: center;
 }
 
@@ -15,4 +18,116 @@ a {
   display: block;
   margin: auto;
   text-align: center;
+}
+
+/* col */
+.col-between {
+  @include flex(no-wrap, space-between, '');
+}
+.col-between-center {
+  @include flex(no-wrap, space-between, center);
+}
+.col-evenly {
+  @include flex(no-wrap, space-evenly, center);
+}
+.col-start {
+  @include flex(no-wrap, flex-start, '');
+}
+.col-center {
+  @include flex(no-wrap, flex-start, center);
+}
+
+.form {
+  width: 100%;
+  max-width: 640px;
+  margin: 40px auto;
+}
+
+.form-group {
+  @include flex(no-wrap, flex-start, center);
+  padding: 20px 0;
+}
+
+.form-group__head {
+  width: 240px;
+}
+
+.form-group__body {
+  width: 100%;
+  @include flex(no-wrap, flex-start, center);
+}
+
+label,
+.select-area,
+.radio-area {
+  width: 100%;
+}
+
+.input,
+.select-area select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  color: $text-color;
+}
+
+.select-area {
+  position: relative;
+  &::before {
+    width: .625em;
+    border: 3px solid transparent;
+    border-color: $primary-color;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    content: "";
+    display: block;
+    height: .625em;
+    margin-top: -.4375em;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+}
+
+.radio-area {
+  @include flex(no-wrap, flex-start, center);
+}
+
+.radio {
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
+  input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+  }
+  input[type='radio'] + label {
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 1.4em;
+      height: 1.4em;
+      margin-right: 1em;
+      text-align: center;
+      background: #fff;
+      border-radius: 100%;
+      border: 1px solid darken($border-color, 10%);
+      position: relative;
+      top: 0;
+      vertical-align: top;
+      cursor: pointer;
+      transition: all 0.3s $ease;
+    }
+  }
+  input[type='radio']:checked + label {
+    &::before {
+      background: $primary-color;
+      box-shadow: inset 0 0 0 4px #fff;
+    }
+  }
 }

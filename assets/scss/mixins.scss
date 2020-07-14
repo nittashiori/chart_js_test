@@ -1,0 +1,11 @@
+/// display flexに対する設定
+/// @param {String} $wrap 折り返しの指定
+/// @param {String} $justify-content 横幅揃え
+/// @param {String} $align-items 縦幅揃え
+// ----------------------------------------
+@mixin flex($wrap, $justify-content, $align-items) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
