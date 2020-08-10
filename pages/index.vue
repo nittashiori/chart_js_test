@@ -19,6 +19,9 @@
       <li class="nav__item">
         <nuxt-link to="/axios">Axios</nuxt-link>
       </li>
+      <li class="nav__item">
+        <nuxt-link to="/todos">Vuex</nuxt-link>
+      </li>
     </ul>
     <div class="graph">
       <BarChart :chartdata="chartdata" :options="options" />
