@@ -16,6 +16,9 @@
       <li class="nav__item">
         <nuxt-link to="/scatter">散布図</nuxt-link>
       </li>
+      <li class="nav__item">
+        <nuxt-link to="/axios">Axios</nuxt-link>
+      </li>
     </ul>
     <div class="graph">
       <BarChart :chartdata="chartdata" :options="options" />

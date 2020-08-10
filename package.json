@@ -13,7 +13,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/axios": "^5.12.1",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",
     "chartjs-plugin-stacked100": "^0.7.1",
